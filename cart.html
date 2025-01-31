@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div id="nav-container">
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="./img/Logo.jpg" alt="">
+            </a>
+            <div class="country-names">
+                <img src="./assets/location_icon.png" alt="">
+                <div>
+                    <span>Deliver to</span>
+                    <h2>United Kingdom</h2>
+                </div>
+            </div>
+            <div class="search-container">
+                <div class="search-bar">
+                    <p>All</p>
+                    <img src="./assets/dropdown_icon.png" alt="">
+                </div>
+                <input type="text" class="search-in" placeholder="Search Product">
+                <img src="./assets/search_icon.png" class="search-in-icon" alt="">
+            </div>
+            <div class="language-container">
+                <img src="./assets/us_flag.png" alt="">
+                <p>EN</p>
+                <img src="./assets/dropdown_icon.png" class="lang-drop-icon" alt="">
+            </div>
+            <div class="text-container">
+                <a href="signIn.html"> <span>Hello,sign in</span></a>
+                <h2>Account & Lists<img src="./assets//dropdown_icon.png" width="8px" alt="">
+                </h2>
+            </div>
+            <div class="text-container">
+                <span>Return</span>
+                <h2>& Orders</h2>
+            </div>
+            <a href="signIn.html" class="user-icon" style="display: none;">
+                <img src="./assets/user.png" alt="">
+            </a>
+            <a href="./index.html" class="cart-icon">
+                <img src="./assets/cart_icon.png" alt="">
+                <h4>Cart</h4>
+            </a>
+        </nav>
+    </div>
+
+    <div id="nav-bottom">
+        <div>
+        <img src="./assets/menu_icon.png" width="30px" alt="">
+        <p>All</p>
+        </div>
+        <p>Today's Deals</p>
+        <p>Costomer Service</p>
+        <p>Registry</p>
+        <p>Gift Cards</p>
+        <p>Sell</p>
+    </div>
+
+    <div class="cart">
+        <div class="cart-left">
+            <h1>Shopping Cart</h1>
+            <hr>
+            <div class="product-list">
+                <img src="./assets/ipad_img.jpg" alt="">
+                <div>
+                    <div class="product-title-price"> 
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Eaque, dicta hic non quidem repudiandae dolores, illum vel itaque,
+                        impedit nihil eum sit perferendis at. Eum fugit beatae ipsa recusandae nesciunt.
+                        </p>
+                        <p><b>$250.00</b></p>
+                    </div>
+                    <p class="product-class-bestseller"><span>#1 Best Seller</span> of iPads</p>
+                    <p class="pro-cart-stock">In Stock</p>
+                    <p class="pro-cart-delivery">FREE delivery <span>Mon, Jan 20</span> Available at checkout</p>
+                    <p class="pro-cart-return">FREE Returns &#11191</p>
+                    <p class="pro-cart-gift">Gift option not Available <span>Learn More</span></p>
+
+                    <div class="pro-cart-specification">
+                        <p><b>Style</b></p> <p>Wifi</p>
+                        <p><b>Size:</b></p> <p>64GB</p>
+                        <p><b>Color:</b></p> <p>Space Gray</p>
+                    </div>
+                    <div class="cart-list-action">
+                        <select name="" class="">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                            <option value="5">Qty: 5</option>
+                        </select>
+                        <hr>
+                        <p class="btn">Delete</p>
+                        <hr>
+                        <p class="btn">Save for later</p>
+                        <hr>
+                        <p class="btn">Compare with similar items</p>
+                        <hr>
+                        <p class="btn">Share</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="product-list">
+                <a href="productPage.html">
+                    <img src="./assets/product_img.jpg" alt="" width="180px">
+                </a>
+             
+                <div>
+                    <div class="product-title-price"> 
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Eaque, dicta hic non quidem repudiandae dolores, illum vel itaque,
+                        impedit nihil eum sit perferendis at. Eum fugit beatae ipsa recusandae nesciunt.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, veniam?
+                        </p>
+                        <p><b>$50.00</b></p>
+                    </div>
+                    <p class="product-class-bestseller"><span>#1 Best Seller</span> of Game Headphones</p>
+                    <p class="pro-cart-stock">In Stock</p>
+                    <p class="pro-cart-delivery">FREE delivery <span>Tues, Jan 29</span> Available at checkout</p>
+                    <p class="pro-cart-return">FREE Returns &#11191</p>
+                    <p class="pro-cart-gift">Gift option not Available <span>Learn More</span></p>
+                   <div class="btn">
+                    <button style="width: 30%;" class="button Add" onclick="addToCart('product-1',250)">Add To Cart</button>
+                    <button style="width: 30%;" class="button Buy">Buy Now</button>
+                   </div>
+        
+                    <div class="pro-cart-specification">
+                        <p><b>Style</b></p> <p>Wire</p>
+                        <p><b>Size:</b></p> <p>Free</p>
+                        <p><b>Color:</b></p> <p>Blue</p>
+                    </div>
+                    <div class="cart-list-action">
+                        <select name="" class="">
+                            <option value="1">Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                            <option value="4">Qty: 4</option>
+                            <option value="5">Qty: 5</option>
+                        </select>
+                        <hr>
+                        <p class="btn">Delete</p>
+                        <hr>
+                        <p class="btn">Save for later</p>
+                        <hr>
+                        <p class="btn">Compare with similar items</p>
+                        <hr>
+                        <p class="btn">Share</p>
+                    </div>
+                </div>
+               
+            </div>
+
+            <hr>
+            <div class="cart-list-subtotal">
+                Subtotal (2 items): <b>$800.43</b>
+            </div>
+        </div>
+        
+        
+        <div class="cart-right">
+            <div class="cart-free-delivery">
+                <p>&#x2705</p>
+                <p>Your order qualifies for Free shipping. <b>Choose
+                    this option at checkout
+                </b>See details</p>
+            </div>
+
+            <div id="list-of-items" >
+
+            </div>
+            <p class="cart-subtotal"> Subtotal (2 items): <b>$800.43</b></p>
+            <p class="cart-right-gift"><input type="checkbox"> This order contains a gift</p>
+            <button>Proceed to checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <img src="./img/Logo.jpg" width="100" alt="">
+        <p>Copyright &#169 2025 </p>
+    </footer>
+    <script>
+        function addToCart(){
+          const item = document.querySelectorAll("product-list");
+          document.getElementById("list-of-items").innerHTML = item;
+        }
+    </script>
+    
+</body>
+</html>  
+

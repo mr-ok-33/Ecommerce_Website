@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Products</h2>
+        <div class="product">
+            <span class="pro-1">Product 1 - $30</span>
+            <button onclick="addToCart('Product 1',30)">Add to cart</button>
+        </div>
+        <div class="product">
+            <span class="pro-1">Product 2 - $50</span>
+            <button onclick="addToCart('Product 2',50)">Add to cart</button> 
+        </div>
+
+        <button onclick="toggleCart()">view Cart</button>
+
+        <div id="cart" class="cart hidden">
+            <h3>Shopping cart</h3>
+            <ul id="cart-items"></ul>
+            <p><b>Total:</b>$<span id="cart-total">0</span></p>
+            <div class="coupon-field">
+                <input type="text" id="coupon-code" placeholder="Enter coupon code">
+                <button class="apply-coupon" onclick="applyCoupon()">Apply</button>
+            </div>
+            <p><b>Final Price: </b>$<span id="final-total">0</span></p>
+        </div>
+    </div>
+
+    <script>
+       let cart = [];
+let total = 0;
+let discount = 0; 
+
+function addToCart(name, price) {
+    cart.push({ name, price });
+    total += price;
+    updateCart();
+}
+
+function updateCart() {
+    const updateItems = document.getElementById("cart-items");
+    updateItems.innerHTML = "";
+    
+    cart.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item.name} - $${item.price} 
+            <button onclick="removeFromCart(${index})">Remove</button>`;
+        updateItems.appendChild(li);
+    });
+
+    document.getElementById("cart-total").innerText = total.toFixed(2);
+    updateFinalCount();
+}
+
+function removeFromCart(index) {
+    total -= cart[index].price;
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function applyCoupon() {
+    const coupon = document.getElementById("coupon-code").value;
+    const discountRates = { "ABC10": 10, "ABC20": 20 };
+    
+    if (discountRates[coupon]) {
+        discount = (total * discountRates[coupon]) / 100;
+        alert(`Coupon Applied! ${discountRates[coupon]}% OFF!`);
+    } else {
+        alert("Coupon is invalid!");
+        discount = 0;
+    }
+
+    updateFinalCount();
+}
+
+function updateFinalCount() {
+    document.getElementById("final-total").innerText = (total - discount).toFixed(2);
+}
+
+function toggleCart() {
+    document.getElementById("cart").classList.toggle("hidden");
+}
+
+    </script>
+</body>
+</html>
